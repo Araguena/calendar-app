@@ -1,0 +1,153 @@
+/*====================================================
+  GENERAL
+  ==================================================*/
+* {
+  box-sizing: border-box; }
+
+.calendar {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  margin: 50px auto;
+  padding: 0;
+  width: 590px; }
+
+.calendar ul {
+  list-style-type: none; }
+
+.weekdays, .weekdays li, .monthdays, .monthdays li, .month, .month li {
+  margin: 0;
+  padding: 0; }
+
+/*====================================================
+  CALENDAR HEADER
+  ==================================================*/
+.month {
+  /* GRID */
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* STYLING */
+  background: #fa5051;
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 15px; }
+
+/*====================================================
+  CALENDAR CELLS & WEEK CELLS
+  ==================================================*/
+.monthdays, .weekdays {
+  font-size: 0;
+  /*To remove extra space between inline-blocks*/ }
+
+.weekdays li, .monthdays li {
+  display: inline-block;
+  width: 14.425%;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.monthdays li {
+  padding: 25px 0;
+  border: 1px solid #f7f7f7;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  color: #bbc3c8;
+  font-size: 24px; }
+
+.monthdays li:nth-of-type(7n+1), .weekdays li:nth-of-type(7n+1) {
+  margin-left: 0; }
+
+.weekdays {
+  margin-top: 20px; }
+
+.weekdays li {
+  padding: 5px 0;
+  font-size: 18px;
+  border: 1px solid #f7f7f7;
+  margin-left: -1px;
+  text-transform: uppercase;
+  color: #fa5051; }
+
+/*====================================================
+  SHADOWS & ROUNDED CORNERS
+  ==================================================*/
+.month {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; }
+
+.monthbox {
+  border-radius: 15px; }
+
+.monthdays li:nth-of-type(29) {
+  border-bottom-left-radius: 15px; }
+
+.monthdays li:last-child {
+  border-bottom-right-radius: 15px; }
+
+.weekbox {
+  border-radius: 10px; }
+
+.weekdays li:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.weekdays li:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.weekbox, .monthbox {
+  box-shadow: 0 0 5px 2px #d2d2d2; }
+
+/*====================================================
+  CURRENT DAY
+  ==================================================*/
+.today.today {
+  /*double-selector kung-foo to get the text white*/
+  position: relative;
+  color: white; }
+
+.today::before {
+  content: '';
+  background: #fa5051;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 44px;
+  width: 44px;
+  z-index: -1; }
+
+/*====================================================
+  BOOKMARKED DAYS
+  ==================================================*/
+.event {
+  position: relative; }
+
+.event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 14px;
+  height: 22px;
+  background: #fa5051; }
+
+.event::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 13px;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  z-index: 2; }
+
+/*# sourceMappingURL=main.css.map */
