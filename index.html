@@ -66,4 +66,14 @@
       </ul>
     </div>
   </div>
+  <script>
+      function markAsCurrentDay(event) {
+          var previouslyMarkedDay = document.querySelector(".today");
+          previouslyMarkedDay.classList.remove("today");
+          var target = event.target;
+          target.classList.add("today");
+      }
+      var month = document.querySelector(".monthdays");
+      month.addEventListener("click", markAsCurrentDay);
+  </script>
 </body>
