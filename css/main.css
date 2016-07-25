@@ -13,14 +13,14 @@
 .calendar ul {
   list-style-type: none; }
 
-.weekdays, .weekdays li, .monthdays, .monthdays li, .month, .month li {
+.week__days, .week__days li, .month__days, .month__days li, .month__header, .month__header li {
   margin: 0;
   padding: 0; }
 
 /*====================================================
   CALENDAR HEADER
   ==================================================*/
-.month {
+.month__header {
   /* GRID */
   text-align: center;
   display: flex;
@@ -39,18 +39,18 @@
 /*====================================================
   CALENDAR CELLS & WEEK CELLS
   ==================================================*/
-.monthdays, .weekdays {
+.month__days, .week__days {
   font-size: 0;
   /*To remove extra space between inline-blocks*/ }
 
-.weekdays li, .monthdays li {
+.week__days li, .month__days li {
   display: inline-block;
   width: 14.425%;
   margin: 0;
   padding: 0;
   text-align: center; }
 
-.monthdays li {
+.month__days li {
   padding: 25px 0;
   border: 1px solid #f7f7f7;
   margin-left: -1px;
@@ -58,13 +58,13 @@
   color: #bbc3c8;
   font-size: 24px; }
 
-.monthdays li:nth-of-type(7n+1), .weekdays li:nth-of-type(7n+1) {
+.month__days li:nth-of-type(7n+1), .week__days li:nth-of-type(7n+1) {
   margin-left: 0; }
 
-.weekdays {
+.week__days {
   margin-top: 20px; }
 
-.weekdays li {
+.week__days li {
   padding: 5px 0;
   font-size: 18px;
   border: 1px solid #f7f7f7;
@@ -75,31 +75,31 @@
 /*====================================================
   SHADOWS & ROUNDED CORNERS
   ==================================================*/
-.month {
+.month__header {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px; }
 
-.monthbox {
+.month {
   border-radius: 15px; }
 
-.monthdays li:nth-of-type(29) {
+.month__days li:nth-of-type(29) {
   border-bottom-left-radius: 15px; }
 
-.monthdays li:last-child {
+.month__days li:last-child {
   border-bottom-right-radius: 15px; }
 
-.weekbox {
+.week {
   border-radius: 10px; }
 
-.weekdays li:first-child {
+.week__days li:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
 
-.weekdays li:last-child {
+.week__days li:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
 
-.weekbox, .monthbox {
+.week, .month {
   box-shadow: 0 0 5px 2px #d2d2d2; }
 
 /*====================================================
@@ -129,25 +129,11 @@
 .event {
   position: relative; }
 
-.event::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 3px;
-  width: 14px;
-  height: 22px;
-  background: #fa5051; }
-
 .event::after {
-  content: "";
+  content: url(../img/bookmark.png);
   position: absolute;
   right: 1px;
-  top: 13px;
-  width: 0;
-  height: 0;
-  border-bottom: 12px solid white;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+  top: 0;
   z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */
