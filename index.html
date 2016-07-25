@@ -27,7 +27,7 @@
         <li class="month__days--curr-month">6</li>
         <li class="month__days--curr-month">7</li>
         <li class="month__days--curr-month">8</li>
-        <li class="month__days--curr-month today">9</li>
+        <li class="month__days--curr-month month__days--today">9</li>
         <li class="month__days--curr-month">10</li>
         <li class="month__days--curr-month">11</li>
         <li class="month__days--curr-month">12</li>
@@ -37,7 +37,7 @@
         <li class="month__days--curr-month">16</li>
         <li class="month__days--curr-month">17</li>
         <li class="month__days--curr-month">18</li>
-        <li class="month__days--curr-month event">19</li>
+        <li class="month__days--curr-month month__days--event">19</li>
         <li class="month__days--curr-month">20</li>
         <li class="month__days--curr-month">21</li>
         <li class="month__days--curr-month">22</li>
@@ -68,10 +68,10 @@
   </div>
   <script>
       function markAsCurrentDay(event) {
-          var previouslyMarkedDay = document.querySelector(".today");
-          previouslyMarkedDay.classList.remove("today");
+          var previouslyMarkedDay = document.querySelector(".month__days--today");
+          previouslyMarkedDay.classList.remove("month__days--today");
           var target = event.target;
-          target.classList.add("today");
+          target.classList.add("month__days--today");
       }
       var month = document.querySelector(".month__days");
       month.addEventListener("click", markAsCurrentDay);

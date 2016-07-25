@@ -105,12 +105,12 @@
 /*====================================================
   CURRENT DAY
   ==================================================*/
-.today.today {
+.month__days--today.month__days--today {
   /*double-selector kung-foo to get the text white*/
   position: relative;
   color: white; }
 
-.today::before {
+.month__days--today::before {
   content: '';
   background: #fa5051;
   border-radius: 50%;
@@ -126,13 +126,13 @@
 /*====================================================
   BOOKMARKED DAYS
   ==================================================*/
-.event {
+.month__days--event {
   position: relative; }
 
-.event::after {
+.month__days--event::after {
   content: url(../img/bookmark.png);
   position: absolute;
-  right: 1px;
+  right: -2px;
   top: 0;
   z-index: 2; }
 
